@@ -6,7 +6,6 @@
 #include <esp_err.h>
 
 #define MAX_DISTANCE_CM 500 // 5m max
-
 #define TRIG_PIN GPIO_NUM_5
 #define ECHO_GPIO GPIO_NUM_18
 
@@ -19,6 +18,7 @@ void ultrasonic_test (void *pvParameters)
 
     ultrasonic_init(&sensor);
 
+//Loop infinito para executar a medição da distância
     while(true)
     {
         float distance;

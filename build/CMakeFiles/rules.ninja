@@ -3104,7 +3104,7 @@ rule C_STATIC_LIBRARY_LINKER____idf_wiegand_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /usr/bin/cmake --regenerate-during-build -S/home/arturpaschoal/ProjectsEsp32/ultrasonic_sensor -B/home/arturpaschoal/ProjectsEsp32/ultrasonic_sensor/build
+  command = /usr/bin/cmake --regenerate-during-build -S/home/arturpaschoal/Documents/ultrasonic_sensor_esp32 -B/home/arturpaschoal/Documents/ultrasonic_sensor_esp32/build
   description = Re-running CMake...
   generator = 1
 

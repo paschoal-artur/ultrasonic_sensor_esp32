@@ -1,4 +1,4 @@
-# Install script for directory: /home/arturpaschoal/ProjectsEsp32/ultrasonic_sensor/main
+# Install script for directory: /home/arturpaschoal/Documents/ultrasonic_sensor_esp32/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
