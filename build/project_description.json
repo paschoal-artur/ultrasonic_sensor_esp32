@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "ultrasonic_sensor",
-    "project_version":    "c8958b0-dirty",
+    "project_version":    "d80ee9e-dirty",
     "project_path":       "/home/arturpaschoal/Documents/ultrasonic_sensor_esp32",
     "idf_path":           "/home/arturpaschoal/esp/v5.2/esp-idf",
     "build_dir":          "/home/arturpaschoal/Documents/ultrasonic_sensor_esp32/build",
