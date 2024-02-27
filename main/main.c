@@ -5,15 +5,15 @@
 #include <ultrasonic.h>
 #include <esp_err.h>
 
-#define MAX_DISTANCE_CM 500 // 5m max
-#define TRIG_PIN GPIO_NUM_5
-#define ECHO_GPIO GPIO_NUM_18
+#define DISTANCIA_MAXIMA_CM 500 // 5m max
+#define PINO_TRIGGER GPIO_NUM_5
+#define PINO_ECHO GPIO_NUM_18
 
-void ultrasonic_test (void *pvParameters)
+void teste_ultrasom (void *pvParameters)
 {
     ultrasonic_sensor_t sensor  = {
-        .trigger_pin = TRIG_PIN,
-        .echo_pin = ECHO_GPIO,
+        .trigger_pin = PINO_TRIGGER,
+        .echo_pin = PINO_ECHO,
     };
 
     ultrasonic_init(&sensor);
@@ -21,12 +21,12 @@ void ultrasonic_test (void *pvParameters)
 //Loop infinito para executar a medição da distância
     while(true)
     {
-        float distance;
-        esp_err_t res = ultrasonic_measure(&sensor, MAX_DISTANCE_CM,  &distance);
-        if (res != ESP_OK) 
+        float distancia;
+        esp_err_t resultado = ultrasonic_measure(&sensor, DISTANCIA_MAXIMA_CM,  &distancia);
+        if (resultado != ESP_OK) 
         {
-            printf("Error %d: ", res);
-            switch(res)
+            printf("Error %d: ", resultado);
+            switch(resultado)
             {
                 case ESP_ERR_ULTRASONIC_PING:
                     printf("Cannot ping (device is in invalid state)\n");
@@ -38,12 +38,12 @@ void ultrasonic_test (void *pvParameters)
                     printf("Echo timeout (i.e. distance too big)\n");
                     break;
                 default:
-                    printf("%s\n", esp_err_to_name(res));
+                    printf("%s\n", esp_err_to_name(resultado));
             }
         }
         else
         {
-            printf("Distance: %0.04f cm\n", distance*100);
+            printf("Distance: %0.04f cm\n", distancia*100);
         }
         
         vTaskDelay(pdMS_TO_TICKS(500));
@@ -52,5 +52,5 @@ void ultrasonic_test (void *pvParameters)
 
 void app_main()
 {
-    xTaskCreate(ultrasonic_test, "ultrasonic_test", configMINIMAL_STACK_SIZE * 3, NULL, 5, NULL);
+    xTaskCreate(teste_ultrasom, "teste_ultrasom", configMINIMAL_STACK_SIZE * 3, NULL, 5, NULL);
 }
