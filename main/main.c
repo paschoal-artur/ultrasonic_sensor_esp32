@@ -5,7 +5,7 @@
 #include <ultrasonic.h>
 #include <esp_err.h>
 
-#define DISTANCIA_MAXIMA_CM 500 // 5m max
+#define DISTANCIA_MAXIMA_CM 500 //! 5m máximo
 #define PINO_TRIGGER GPIO_NUM_5
 #define PINO_ECHO GPIO_NUM_18
 
