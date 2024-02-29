@@ -1,4 +1,4 @@
-/* * Data converted from /home/arturpaschoal/Documents/ultrasonic_sensor_esp32/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from /home/arturpaschoal/Github/ultrasonic_sensor_esp32/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

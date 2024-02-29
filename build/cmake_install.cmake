@@ -1,4 +1,4 @@
-# Install script for directory: /home/arturpaschoal/Documents/ultrasonic_sensor_esp32
+# Install script for directory: /home/arturpaschoal/Github/ultrasonic_sensor_esp32
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/home/arturpaschoal/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
+  set(CMAKE_OBJDUMP "/home/arturpaschoal/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/xtensa-esp32-elf-objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/arturpaschoal/Documents/ultrasonic_sensor_esp32/build/esp-idf/cmake_install.cmake")
+  include("/home/arturpaschoal/Github/ultrasonic_sensor_esp32/build/esp-idf/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/arturpaschoal/Documents/ultrasonic_sensor_esp32/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/arturpaschoal/Github/ultrasonic_sensor_esp32/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
